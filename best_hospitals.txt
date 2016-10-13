@@ -1,0 +1,38 @@
+W205 - Section 4
+Fall 2016
+Exercise 1
+David Skarbrevik
+
+
+The top 10 hospitals are as follows:
+1. Good Samaritan Hospital, CA
+2. St. Joseph Hospital, CA
+3. Good Samaritan Hospital, OH
+4. St. Mary Medical Center, CA
+5. St. Joseph Medical Center, WA
+6. Aurora Medical Center, WI
+7. Creighton University Medical Center, NE
+8. Mercy Hospital, TX
+9. Memorial Hospital, TX
+10. Memorial Hospital, IL
+
+
+Explanation of Method:
+By summing the scores for every procedure and grouping by the hospital name, we see a cumulative score for each hospital. Ordering in descending order gives us the top 10 hospitals. It is sensible to think that this is reflective of the overall quality of the hospital, but contains some inherent problems. Because the score obtained by each procedure does not have the same range (i.e. highest possible score for procedure A may be 300, but for procedure B it may be 100) there could be a systematic bias of rating a hospital as better than another because it happens to be better at one particular procedure that has a large score range.
+
+
+
+
+Direct results of best_hospitals.sql query
+
+Hospital Name        State        Score
+GOOD SAMARITAN HOSPITAL        CA        6782.0
+ST JOSEPH HOSPITAL        CA        6377.0
+GOOD SAMARITAN HOSPITAL        OH        6358.0
+ST MARY MEDICAL CENTER        CA        6344.0
+ST JOSEPH MEDICAL CENTER        WA        6306.0
+AURORA MEDICAL CENTER        WI        5362.0
+CHI HLTH CREIGHTON UNIVERSITY MED CTR-BERGAN MERCY        NE        5293.0
+MERCY HOSPITAL        MN        5125.0
+MEMORIAL HOSPITAL        TX        5036.0
+MEMORIAL HOSPITAL        IL        4949.0
