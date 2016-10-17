@@ -1,0 +1,41 @@
+W205 - Section 4
+Fall 2016
+Exercise 1
+David Skarbrevik
+
+
+
+
+Top 10 Procedures with Greatest Variability:
+1. ED1
+2. ED2
+3. OP 18
+4. Median Time to Transfer to Another Facility for Acute Coronary Intervention
+5. Door to Diagnostic evaluation
+6. Median time to receive pain medication
+7. Endoscopy/Polyp Surveillance: Appropriate Follow-Up Interval
+8. Endoscopy/Polyp Surveillance: Colonoscopy Interval 
+9. Venous thromboembolism prophylaxis
+10. Immunization for influenza
+
+
+Explanation of Method:
+The scores of each procedure were aggregated and the variance was taken. The procedures in this list represent procedures that are handled with high variability from hospital to hospital. ED stands for Emergency Department, but it is unclear specifically what kinds of procedures this might include and what the difference between ED1 and ED2 is. OP18 is “Operation 18” though it is unclear specifically what procedure this refers to. Overall this strategy for obtaining the variance of a procedure from hospital to hospital seems reasonable logical (i.e. procedures of the emergency department would presumably vary dramatically depending on the hospital).
+
+
+
+
+Direct results of hospitals_variability.sql query:
+
+
+Procedure Name        Procedure Variability
+ED1        34262
+ED2        14121
+OP 18        5914
+Median Time to Transfer to Another Facility for Acute Coronary Intervention        4158
+Door to diagnostic eval        1237
+Median time to pain med        1067
+Endoscopy/Polyp Surveillance: Appropriate Follow-Up Interval for Normal Colonoscopy in Average Risk Patients                850
+Endoscopy/Polyp Surveillance: Colonoscopy Interval for Patients with a History of Adenomatous Polyps - Avoidance of Inappropriate Use        838
+Venous thromboembolism prophylaxis        824
+Immunization for influenza        810

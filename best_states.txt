@@ -1,0 +1,39 @@
+W205 - Section 4
+Fall 2016
+Exercise 1
+David Skarbrevik
+
+
+The top 10 states for medical healthcare are as follows:
+1. California
+2. New York
+3. Texas
+4. Florida
+5. Pennsylvania 
+6. Illinois
+7. Georgia
+8. Ohio
+9. New Jersey
+10. Michigan
+
+
+
+Explanation of Method:
+By summing the scores for each procedure by state, the result is a cumulative score that embodies the overall quality of hospitals in that state. The issues with this strategy are similar to those listed in “best_hospitals.txt”, however it should also be noted that the interpretation of these results is ambiguous. That is, just because California ranked as the “best” in healthcare for the US doesn’t mean that every hospital in California is necessarily very good.
+
+
+
+
+Direct results of best_states.sql query:
+
+State        Score
+CA        100086.0
+NY        79451.0
+TX        63665.0
+FL        56169.0
+PA        47223.0
+IL        46250.0
+GA        42669.0
+OH        40661.0
+NJ        39711.0
+MI        38233.0

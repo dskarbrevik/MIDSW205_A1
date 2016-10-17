@@ -1,0 +1,73 @@
+W205 - Section 4
+Fall 2016
+Exercise 1
+David Skarbrevik
+
+
+
+
+Are average scores for hospital quality correlated with Patient Survey Responses?:
+
+Summary of results:
+
+[Rank of Hospital
+[Hospital Name (Procedure Ranking)
+[Hospital Name (Patient Survey Ranking)
+
+[1
+[Good Samaritan Hospital
+[Donalsonville Hospital
+
+[2
+[St. Joseph Hospital
+[Crittenden Health System
+
+[3
+[Good Samaritan Hospital
+[Provident Hospital
+
+[4
+[St. Mary Medical Center
+[Lincoln Hospital
+	
+[5
+[St. Joseph Medical Center
+[Community Hospital
+	
+[6
+[Aurora Medical Center
+[Harrison Memorial Hospital
+
+[7
+[Creighton University Medical Center
+[St. Mary’s Hospital
+
+[8
+[Mercy Hospital
+[St. Vincent Hospital
+	
+[9
+[Memorial Hospital (TX)
+[Pagosa Springs Medical Center
+	
+[10
+[Memorial Hospital (IL)
+[Ozark Health
+	
+
+Explanation of Method:
+By aggregating scores for different questions on patient surveys we have a cumulative score for each hospital (max of 15). One issue is that more than 10 hospitals scored a perfect 15. Also, though I did not do so, it would have been good to consider only hospitals with at least X amount of responses so that hospitals that may have a small sample size don’t rank high simply due to chance. Looking at a comparison of the top 10 survey results and top 10 hospitals (scored by procedure proficiency) it would seem that there is no overlap between the two lists. However if we were to include more than 10 results from the survey query, we would see that several hospitals from the top 10 hospitals actually scored a perfect 15 as well.
+
+
+Direct results of hospitals_and_patients.sql query:
+
+DONALSONVILLE HOSPITAL INC        15.0
+CRITTENDEN HEALTH SYSTEM        15.0
+PROVIDENT HOSPITAL OF CHICAGO        15.0
+LINCOLN HOSPITAL        15.0
+COMMUNITY HOSPITAL        15.0
+HARRISON MEMORIAL HOSPITAL        15.0
+ST MARY'S HOSPITAL AT AMSTERDAM        15.0
+ST VINCENT HOSPITAL        15.0
+PAGOSA SPRINGS MEDICAL CENTER        15.0
+OZARK HEALTH        15.0

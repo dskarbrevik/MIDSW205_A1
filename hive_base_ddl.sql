@@ -1,6 +1,28 @@
 
-DROP TABLE Procedures;
-CREATE EXTERNAL TABLE Procedures (Provider_ID int, Measure_ID int, Measure_Name string, Score double, Patient_Sample_Size int)
+DROP TABLE survey_data;
+CREATE EXTERNAL TABLE survey_data
+(`Provider ID` int, 
+`Hospital Name` string, 
+`Address` string, 
+`City` string, 
+`State` string, 
+`ZIP Code` string, 
+`County Name` string, 
+`Phone Number` string, 
+`HCAHPS Measure ID` string, 
+`HCAHPS Question` string, 
+`HCAHPS Answer Description` string, 
+`Patient Survey Star Rating` int, 
+`Patient Survey Star Rating Footnote` string, 
+`HCAHPS Answer Percent` int, 
+`HCAHPS Answer Percent Footnote` string,
+`HCAHPS Linear Mean Value` int, 
+`Number of Completed Surveys` int, 
+`Number of Completed Surveys Footnote` string, 
+`Survey Response Rate Percent` string, 
+`Survey Repsonse Rate Percent Footnote` string, 
+`Measure Start Date` string, 
+`Measure End Date` string)
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
 "separatorChar" =",",
@@ -8,10 +30,26 @@ WITH SERDEPROPERTIES (
 "escapeChar" ='\\'
 )
 STORED AS TEXTFILE
-LOCATION '/user/w205/';
+LOCATION '/user/w205/exercise_1/loading_and_modeling/surveys';
 
-DROP TABLE Surveys;
-CREATE EXTERNAL TABLE Surveys (Provider_ID int, Survey_ID int, Question string, Answer string, Num_Completed_Surveys int)
+DROP TABLE procedure_data;
+CREATE EXTERNAL TABLE procedure_data 
+(`Provider ID` int, 
+`Hospital Name` string, 
+`Address` string,
+`City` string,
+`State` string, 
+`ZIP Code` string,
+`County Name` string,
+`Phone Number` string,
+`Condition` string, 
+`Measure ID` string, 
+`Measure Name` string, 
+`Score` int, 
+`Sample` string,
+`Footnote` string,
+`Measure Start Date` string,
+`Measure End Date` string)
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
 "separatorChar" =",",
@@ -19,15 +57,5 @@ WITH SERDEPROPERTIES (
 "escapeChar" ='\\'
 )
 STORED AS TEXTFILE
-LOCATION '/user/w205/';
+LOCATION '/user/w205/exercise_1/loading_and_modeling/procedures';
 
-DROP TABLE Hospitals;
-CREATE EXTERNAL TABLE Hospitals (Provider_ID int, Name string, State string)
-ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
-WITH SERDEPROPERTIES (
-"seperatorChar" =",",
-"quoteChar" ='"',
-"escapeChar" = '\\'
-)
-STORED AS TEXTFILE
-LOCATION '/user/w205';
